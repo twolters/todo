@@ -1,11 +1,17 @@
 import React from 'react';
-import { Hello } from './Hello.jsx';
-import { Info } from './Info.jsx';
+import { useTracker } from 'meteor/react-meteor-data';
+import { Info } from './Info';
+import { TaskList } from './Task';
 
-export const App = () => (
-  <div>
-    <h1>Welcome to Meteor!</h1>
-    <Hello/>
-    <Info/>
-  </div>
-);
+            //tasks.map(task => <Task key={ task._id } task={ task }/>) }
+
+const App = () => {
+
+    return (
+      <div>
+        <TaskList/>
+      </div>
+    );
+};
+
+export default App;
